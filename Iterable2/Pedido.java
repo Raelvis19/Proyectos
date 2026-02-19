@@ -1,4 +1,5 @@
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Pedido {
 
@@ -10,6 +11,11 @@ public class Pedido {
     private EstadoPedido estado;
     private DetallePedido[] detalles;
     private int indice;
+    private Date FechaCreacion;
+
+    public Date getFechaCreacion() {
+        return FechaCreacion;
+    }
 
     public Pedido(int id, Cliente cliente, int maxDetalles) {
         this.id = id;
@@ -17,6 +23,7 @@ public class Pedido {
         this.estado = EstadoPedido.BORRADOR;
         this.detalles = new DetallePedido[maxDetalles];
         this.indice = 0;
+        this.FechaCreacion = new Date();
     }
 
     public void agregarProducto(Producto p, int cant) {
@@ -42,6 +49,7 @@ public class Pedido {
 
     public void confirmar() {
         if (indice == 0) return;
+        
 
         for (DetallePedido d : detalles) {
             if (d != null) {
@@ -133,6 +141,13 @@ public class Pedido {
         System.out.println("Pedido cancelado");
     }
     }
+    public String getFechaFormateada() {
+
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+    return sdf.format(FechaCreacion);
+    }
+
 
 
 }

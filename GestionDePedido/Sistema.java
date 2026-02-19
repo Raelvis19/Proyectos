@@ -1,4 +1,4 @@
-package Proyectos.GestionDePedido;
+
 import java.util.Scanner;
 
 public class Sistema {
@@ -14,7 +14,7 @@ public class Sistema {
         Scanner sc = new Scanner(System.in);
         int opcion;
 
-        // Ejemplo: Sistema sistema = new Sistema();
+    
 
         do {
             System.out.println("\n---- SISTEMA DE PEDIDOS ----");
@@ -271,7 +271,7 @@ public class Sistema {
         return;
         }
 
-        // Aquí solo llamas al pedido
+        
         pedidoEncontrado.agregarProducto(productoEncontrado, cantidad);
 
         System.out.println("Producto agregado al pedido");
