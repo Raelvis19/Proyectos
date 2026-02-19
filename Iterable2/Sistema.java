@@ -19,7 +19,7 @@ public class Sistema {
         Scanner sc = new Scanner(System.in);
         int opcion;
 
-        // Ejemplo: Sistema sistema = new Sistema();
+        
 
         do {
             System.out.println("\n---- SISTEMA DE PEDIDOS ----");
